@@ -1,0 +1,10 @@
+D:\RJ Code Advance\Source Code C#\2022\DataDashboardApp\DataDashboardApp\bin\Debug\DashboardApp.exe.config
+D:\RJ Code Advance\Source Code C#\2022\DataDashboardApp\DataDashboardApp\bin\Debug\DashboardApp.exe
+D:\RJ Code Advance\Source Code C#\2022\DataDashboardApp\DataDashboardApp\bin\Debug\DashboardApp.pdb
+D:\RJ Code Advance\Source Code C#\2022\DataDashboardApp\DataDashboardApp\obj\Debug\DashboardApp.csproj.AssemblyReference.cache
+D:\RJ Code Advance\Source Code C#\2022\DataDashboardApp\DataDashboardApp\obj\Debug\DashboardApp.Properties.Resources.resources
+D:\RJ Code Advance\Source Code C#\2022\DataDashboardApp\DataDashboardApp\obj\Debug\DashboardApp.csproj.GenerateResource.cache
+D:\RJ Code Advance\Source Code C#\2022\DataDashboardApp\DataDashboardApp\obj\Debug\DashboardApp.csproj.CoreCompileInputs.cache
+D:\RJ Code Advance\Source Code C#\2022\DataDashboardApp\DataDashboardApp\obj\Debug\DashboardApp.exe
+D:\RJ Code Advance\Source Code C#\2022\DataDashboardApp\DataDashboardApp\obj\Debug\DashboardApp.pdb
+D:\RJ Code Advance\Source Code C#\2022\DataDashboardApp\DataDashboardApp\obj\Debug\DashboardApp.Form1.resources
