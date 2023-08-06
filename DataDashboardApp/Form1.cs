@@ -15,6 +15,7 @@ namespace DashboardApp
     {
         //Fields
         private Dashboard model;
+        private Button currentButton;
 
         //Constructor
         public Form1()
@@ -24,7 +25,7 @@ namespace DashboardApp
             dtpStartDate.Value = DateTime.Today.AddDays(-7);
             dtpEndDate.Value = DateTime.Now;
             btnLast7Days.Select();
-
+            SetDataMenuButtonsUI(btnLast7Days);
             model = new Dashboard();
             LoadData();
         }
@@ -60,11 +61,39 @@ namespace DashboardApp
             }
             else Console.WriteLine("View not loaded, same query");
         }
-        private void DisableCustomDates()
+        private void SetDataMenuButtonsUI(object button)
         {
-            dtpStartDate.Enabled = false;
-            dtpEndDate.Enabled = false;
-            btnOkCustomDate.Visible = false;
+            var btn = (Button)button;
+            //Highligh button
+            btn.BackColor = btnLast30Days.FlatAppearance.BorderColor;
+            btn.ForeColor = Color.White;
+            //Unhighlight button
+            if (currentButton != null&&currentButton!=btn)
+            {
+                currentButton.BackColor = this.BackColor;
+                currentButton.ForeColor = Color.FromArgb(124, 141, 181);
+            }
+            currentButton = btn;//Set current button
+
+            //Enable custom dates
+            if(btn==btnCustomDate)
+            {
+                dtpStartDate.Enabled = true;
+                dtpEndDate.Enabled = true;
+                btnOkCustomDate.Visible = true;
+                lblStartDate.Cursor = Cursors.Hand;
+                lblEndDate.Cursor = Cursors.Hand;
+            }
+            //Disable custom dates
+            else
+            {
+                dtpStartDate.Enabled = false;
+                dtpEndDate.Enabled = false;
+                btnOkCustomDate.Visible = false;
+                lblStartDate.Cursor = Cursors.Default;
+                lblEndDate.Cursor = Cursors.Default;
+            }
+
         }
 
         //Event methods
@@ -73,7 +102,7 @@ namespace DashboardApp
             dtpStartDate.Value = DateTime.Today;
             dtpEndDate.Value = DateTime.Now;
             LoadData();
-            DisableCustomDates();
+            SetDataMenuButtonsUI(sender);
         }
 
         private void btnLast7Days_Click(object sender, EventArgs e)
@@ -81,7 +110,7 @@ namespace DashboardApp
             dtpStartDate.Value = DateTime.Today.AddDays(-7);
             dtpEndDate.Value = DateTime.Now;
             LoadData();
-            DisableCustomDates();
+            SetDataMenuButtonsUI(sender);
         }
 
         private void btnLast30Days_Click(object sender, EventArgs e)
@@ -89,7 +118,7 @@ namespace DashboardApp
             dtpStartDate.Value = DateTime.Today.AddDays(-30);
             dtpEndDate.Value = DateTime.Now;
             LoadData();
-            DisableCustomDates();
+            SetDataMenuButtonsUI(sender);
         }
 
         private void btnThisMonth_Click(object sender, EventArgs e)
@@ -97,19 +126,52 @@ namespace DashboardApp
             dtpStartDate.Value = new DateTime(DateTime.Today.Year, DateTime.Today.Month, 1);
             dtpEndDate.Value = DateTime.Now;
             LoadData();
-            DisableCustomDates();
+            SetDataMenuButtonsUI(sender);
         }
 
         private void btnCustomDate_Click(object sender, EventArgs e)
         {
-            dtpStartDate.Enabled = true;
-            dtpEndDate.Enabled = true;
-            btnOkCustomDate.Visible = true;
+            SetDataMenuButtonsUI(sender);
         }
 
         private void btnOkCustomDate_Click(object sender, EventArgs e)
         {
             LoadData();
+        }
+
+        private void lblStartDate_Click(object sender, EventArgs e)
+        {
+            if (currentButton == btnCustomDate) 
+            {
+                dtpStartDate.Select();
+                SendKeys.Send("%{DOWN}");
+            }
+        }
+
+        private void lblEndDate_Click(object sender, EventArgs e)
+        {
+            if (currentButton == btnCustomDate)
+            {
+                dtpEndDate.Select();
+                SendKeys.Send("%{DOWN}");
+            }
+        }
+
+        private void dtpStartDate_ValueChanged(object sender, EventArgs e)
+        {
+            lblStartDate.Text = dtpStartDate.Text;
+        }
+
+        private void dtpEndDate_ValueChanged(object sender, EventArgs e)
+        {
+            lblEndDate.Text = dtpEndDate.Text;
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            lblStartDate.Text = dtpStartDate.Text;
+            lblEndDate.Text = dtpEndDate.Text;
+            dgvUnderstock.Columns[1].Width = 50;
         }
     }
 }

@@ -8,3 +8,13 @@ D:\RJ Code Advance\Source Code C#\2022\DataDashboardApp\DataDashboardApp\obj\Deb
 D:\RJ Code Advance\Source Code C#\2022\DataDashboardApp\DataDashboardApp\obj\Debug\DashboardApp.exe
 D:\RJ Code Advance\Source Code C#\2022\DataDashboardApp\DataDashboardApp\obj\Debug\DashboardApp.pdb
 D:\RJ Code Advance\Source Code C#\2022\DataDashboardApp\DataDashboardApp\obj\Debug\DashboardApp.Form1.resources
+D:\GitHub\repo\Data-Dashboard-CSharp-SQL-WinForms\DataDashboardApp\obj\Debug\DashboardApp.csproj.AssemblyReference.cache
+D:\GitHub\repo\Data-Dashboard-CSharp-SQL-WinForms\DataDashboardApp\obj\Debug\DashboardApp.Form1.resources
+D:\GitHub\repo\Data-Dashboard-CSharp-SQL-WinForms\DataDashboardApp\obj\Debug\DashboardApp.Properties.Resources.resources
+D:\GitHub\repo\Data-Dashboard-CSharp-SQL-WinForms\DataDashboardApp\obj\Debug\DashboardApp.csproj.GenerateResource.cache
+D:\GitHub\repo\Data-Dashboard-CSharp-SQL-WinForms\DataDashboardApp\obj\Debug\DashboardApp.csproj.CoreCompileInputs.cache
+D:\GitHub\repo\Data-Dashboard-CSharp-SQL-WinForms\DataDashboardApp\obj\Debug\DashboardApp.exe
+D:\GitHub\repo\Data-Dashboard-CSharp-SQL-WinForms\DataDashboardApp\obj\Debug\DashboardApp.pdb
+D:\GitHub\repo\Data-Dashboard-CSharp-SQL-WinForms\DataDashboardApp\bin\Debug\DashboardApp.exe.config
+D:\GitHub\repo\Data-Dashboard-CSharp-SQL-WinForms\DataDashboardApp\bin\Debug\DashboardApp.exe
+D:\GitHub\repo\Data-Dashboard-CSharp-SQL-WinForms\DataDashboardApp\bin\Debug\DashboardApp.pdb
